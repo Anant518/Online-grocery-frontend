@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="row inline" id="gap">
+    <div class="row">
+      <div class="pb-3 pt-3">
+        <h4 class="col-12 text-center">Our Categories</h4>
+      </div>
+    </div>
+
+    <div class="card" id="card1" *ngFor="let data of categoryModel">
+
+      <img class="card-img-top" id="image" src={{data.imageUrl}}>
+      <div class="card-body">
+        <h5 class="card-title" ng-mouseover="changeText=true" ng-mouseleave="changeText=false">{{data.categoryName}}
+        </h5>
+        <p class="card-text font-italic">{{data.description}}</p>
+        <a (click)="onSelect(data)" class="btn btn-primary">View</a>
+      </div>
+    </div>

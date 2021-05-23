@@ -1,0 +1,16 @@
+#card1{
+        width: 204px;
+    height: 100;
+           
+      
+}
+#gap{
+    column-gap: 30px;
+}
+#image{
+    height: 150px;
+}
+
+.card{
+    margin-bottom: 10px;
+}

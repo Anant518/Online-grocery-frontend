@@ -1,0 +1,31 @@
+<div class="container">
+    <div class="row">
+    <div class="col-12 justify-content-center d-flex flex-row pt-5">
+        <div id="signup-div" class="flex-item border">
+            <h2 class="pt-4 pl-4">Sign-In</h2>
+
+            <form class="row g-1 pt-4 pl-4 pr-4" (ngSubmit)="onSubmit()">
+                <div class="form-group">
+                    <label> Email Id</label>
+                    <input type="text" class="form-control" id="emailId" [(ngModel)]="login2.email"
+                        [ngModelOptions]="{standalone: true}" name="email" required >
+                </div>
+                <div class="form-group">
+
+                    <label>Password</label>
+                    <input type="text" class="form-control" [(ngModel)]="login2.password"
+                        [ngModelOptions]="{standalone: true}" type="password"  id="inputPassword4" required>
+
+                </div> 
+                <div class="col-12">
+                    <button type="submit" class="btn btn-primary mt-2 py-0">SignIn</button>
+                </div>
+            </form>
+            <hr>
+            <div class="row g-1 pt-1 pl-2 pr-2 pb-2">
+          <small class="form-text text-muted pt-1 pl-4 text-center">New User?</small>         
+          <!-- <button type="submit" class="btn btn-light d-grid gap-2 col-6 mx-auto" routerLink="signup" routerLinkActive="active">SignUp Here</button> -->
+          <a routerLink="/signup" routerLinkActive="active" class="text-center" >SignUp Here</a>
+        </div>      
+        </div>
+    </div>

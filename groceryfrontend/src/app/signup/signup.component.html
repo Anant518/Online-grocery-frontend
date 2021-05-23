@@ -1,0 +1,122 @@
+<div>
+    <div class="container ">
+        <div class="row ">
+            <div class="col-12 justify-content-center d-flex flex-row pt-5">
+                <div id="signup-div" class="flex-item border">
+                    <h2 class="pt-4 pl-4">Create Account</h2>
+                    <form class="row g-1 pt-4 pl-4 pr-4 pb-4" (ngSubmit)="onSubmit()">
+
+                        <div class="row"  *ngIf="showMsg">
+                            <div class="col-xs-12">
+                              <p class="alert alert-success">
+                                  <strong>Registration Success!</strong>
+                    
+                              </p>
+                            </div>
+                          </div>
+
+
+                        <div class="form-group">
+                            <label> Email Id</label>
+                            <input type="text" class="form-control" id="emailId" [(ngModel)]="user.email"
+                                [ngModelOptions]="{standalone: true}" name="email">
+                        </div>
+
+                        <div class="form-row">
+                            <div class="col">
+
+                                <div class="form-group">
+                                    <label> First Name</label>
+                                    <input type="text" class="form-control" id="firstName" [(ngModel)]="user.firstName"
+                                        [ngModelOptions]="{standalone: true}" name="firstName">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-group">
+                                    <label> Last Name</label>
+                                    <input type="text" class="form-control" id="lastName" [(ngModel)]="user.lastName"
+                                        [ngModelOptions]="{standalone: true}" name="lastName">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+
+                            <label>Password</label>
+                            <input type="text" class="form-control" [(ngModel)]="user.password"
+                                [ngModelOptions]="{standalone: true}" type="password" id="inputPassword4">
+
+                        </div>
+
+                        <div class="col-12">
+                            <button type="submit" class="btn btn-primary mt-2 py-0">Submit</button>
+                        </div>
+
+                    </form>
+
+                    <!-- <form class="row g-1 pt-4 pl-4 pr-4 " (ngSubmit)="onSubmit()">
+                        <div class="form-group">
+
+                            <label for="inputEmail4" class="form-label">Email</label>
+                            <input [(ngModel)]="user.email" name="email" type="email" class="form-control"
+                                v-model="email" required>
+
+
+                        </div>
+                        <div class="form-row">
+                            <div class="col">
+                                <div class="form-group">
+
+                                    <label for="inputEmail4" class="form-label">First Name</label>
+                                    <input [(ngModel)]="user.firstname" type="name" class="form-control"
+                                        v-model="firstName" required>
+                                </div>
+
+                            </div>
+                            <div class="col">
+                                <div class="form-group">
+
+                                    <label for="inputEmail4" class="form-label">Last Name</label>
+                                    <input [(ngModel)]="user.lastname" type="name" class="form-control"
+                                        v-model="firstName" required>
+
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="form-group">
+
+                            <label for="inputPassword4" class="form-label">Password</label>
+                            <input [(ngModel)]="user.password" type="password" class="form-control" id="inputPassword4">
+
+                        </div>
+                        <div class="form-group">
+
+                            <label for="inputPassword4" class="form-label">Conform Password</label>
+                            <input type="password" class="form-control" id="inputPassword4">
+
+                        </div>
+                        <div class="col-12">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="gridCheck">
+                                <label class="form-check-label" for="gridCheck">
+                                    Check me out
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <button type="submit" class="btn btn-primary mt-2 py-0">Create Account</button>
+                        </div>
+                    </form> -->
+                    <hr>
+                    <div class="row g-1  pl-4 pr-4 pb-4">
+                        <small class="form-text text-muted pt-2 pl-4 text-center">Already Have an Account?</small>
+                        <!-- <button type="button" class="text-center d-grid gap-2 col-6 mx-auto" (click)="btnClick();">Login Here</button> -->
+                        <a routerLink="/login" routerLinkActive="active"class="text-center" >Login Here</a>
+                        </div>
+
+
+                </div>
+
+            </div>
+        </div>

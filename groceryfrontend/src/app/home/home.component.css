@@ -1,0 +1,25 @@
+#background-div{
+    background-image:url("../../assets/groceryHome.jpg");
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position-y: cover;
+    width:cover;
+    height:500px ;
+      
+}
+
+
+#description{
+    height: 160px;
+
+}
+#gap{
+    column-gap: 55px;
+}
+
+#image{
+    margin-left: auto;
+    margin-right: auto;
+    width:200px;
+    height: 150px;
+    }

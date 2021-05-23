@@ -1,0 +1,43 @@
+<div class="container">
+  <div class="row pt-5">
+    <div class="col-md-1">
+    </div>
+    <div class="col-md-4 col-12">
+      <img src="{{data1.imageURL}}" :alt="data1.name" class="img-fluid">
+    </div>
+    <div class="col-md-6 col-12 pt-3 pt-md-0">
+      <h4>{{data1.name}}</h4>
+      <p><span class="font-weight-bold">Description: -</span> <br>{{data1.description}}</p>
+      <p><span class="font-weight-bold">Price: </span>{{data1.price}}</p>
+      <div class="d-flex flex-row justify-content-between">
+        <div class="input-group col-md-3 col-4 p-0">
+          <div class="input-group-prepend">
+            <span class="font-weight-bold" id="basic-addon1">Quantity</span>
+
+            <div class="col-sm-8 mb-5">
+              <div class="form-check-inline">
+                <button class="btn btn-primary" (click)="plus()"><i class="fa fa-plus"></i></button>
+              </div>
+              <div class="form-check-inline">
+                <input type="text" class="form-control" [(ngModel)]="inputnumber">
+              </div>
+              <div class="form-check-inline">
+                <button class="btn btn-primary" (click)="minus()"><i class="fa fa-minus"></i></button>
+              </div>
+            </div>
+            <p id="item-total-price" class="mb-0">Total Price :{{inputnumber*data1.price}}<span
+                class="font-weight-bold"></span></p>
+          </div>
+        </div>
+
+
+
+
+        <div class="input-group col-md-3 col-4 p-0">
+          <!-- <button type="button" id="add-to-cart-button" class="btn"> Place Order </button> -->
+          <button routerLink="/payment" class="btn" type="button">Confirm Order</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
